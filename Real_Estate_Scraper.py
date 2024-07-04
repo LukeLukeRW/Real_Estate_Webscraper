@@ -11,7 +11,11 @@ def main(file):
     global driver
     suburb_list = initialising_variables(file)
     for y in range(len(suburb_list)):
-        suburb_list+=1
+        url = f"https://www.realestate.com.au/buy/in{suburb_list[y][0]}+vic+{suburb_list[y][1]}/list-{y}"
+        driver.get(url)
+        soup = BeautifulSoup(driver.page_source,'html.parser')
+        
+        
 
 
 def initialising_variables(file):
@@ -31,10 +35,9 @@ def initialising_variables(file):
 
 if __name__ == '__main__':
     driver = selenium.webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-    # url = "https://www.realestate.com.au/buy/in-black+rock,+vic+3193/list-1"
-    url = f"https://www.realestate.com.au/buy/in{Suburb}+vic+3193/list-{i}"
+    
     file = "Melb_Suburb_List.csv"
-    main(file,url)
+    main(file)
 
 # i = None
 
@@ -50,3 +53,4 @@ if __name__ == '__main__':
 # !!
 # <a href="/property-house-vic-bendigo-144287668" class="details-link residential-card__details-link"><span class="">67 Garsed Street, Bendigo</span></a>
 # https://www.realestate.com.au/property-house-vic-bendigo-144287668
+# /property-house-vic-bendigo-144287668
