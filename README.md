@@ -6,3 +6,7 @@ homely.com.au
 
 seem much easier than real esate.
 i think one of them even has an api key :))))
+
+
+
+note to self^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
